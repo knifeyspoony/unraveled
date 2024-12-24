@@ -5,12 +5,13 @@ description = "Reverse engineering agents"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "ghidra-stubs",
+    "docker>=7.1.0",
+    "fastapi>=0.115.6",
     "google-generativeai>=0.8.3",
-    "jep==4.2.0",
     "pydantic-ai>=0.0.15",
     "python-dotenv>=1.0.1",
     "rich>=13.9.4",
+    "uvicorn>=0.34.0",
 ]
 
 [build-system]
@@ -22,6 +23,3 @@ packages = ["src/unraveled"]
 
 [tool.hatch.build]
 packages = ["src/unraveled"]
-
-[tool.uv.sources]
-ghidra-stubs = { path = "../../Downloads/ghidra_stubs-11.2.1.1.0.4-py2.py3-none-any.whl" }
