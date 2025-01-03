@@ -1,0 +1,1 @@
+import socket\n\nHOST = \"87fc4a24196c95a1.247ctf.com\"\nPORT = 50217\n\nwith socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:\n    s.connect((HOST, PORT))\n    s.settimeout(5)\n    data = s.recv(1024)\n    print(data)\n

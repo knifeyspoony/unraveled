@@ -1,0 +1,5 @@
+We need to do *something* with this host/port to find the flag!
+
+Here is the connection information:
+
+tcp://72219560e07b1fa3.247ctf.com:50459

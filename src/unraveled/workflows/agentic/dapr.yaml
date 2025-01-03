@@ -1,0 +1,32 @@
+# https://docs.dapr.io/developing-applications/local-development/multi-app-dapr-run/multi-app-template/#template-properties
+version: 1
+common:
+  resourcesPath: ./components
+  logLevel: info
+  appLogDestination: console
+  daprdLogDestination: console
+
+apps:
+  - appId: WorkflowApp
+    appDirPath: ./services/orchestrator/
+    appPort: 8001
+    command: ["python", "app.py"]
+    daprGRPCPort: 50001
+
+  - appId: CaptainApp
+    appDirPath: ./services/captain/
+    appPort: 8002
+    command: ["python", "app.py"]
+    daprGRPCPort: 50002
+
+  - appId: CoderApp
+    appDirPath: ./services/coder/
+    appPort: 8003
+    command: ["python", "app.py"]
+    daprGRPCPort: 50003
+
+  - appId: SocketExpertApp
+    appDirPath: ./services/socket/
+    appPort: 8004
+    command: ["python", "app.py"]
+    daprGRPCPort: 50004
